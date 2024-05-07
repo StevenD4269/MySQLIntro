@@ -1,5 +1,5 @@
 -- Using the bestbuy database:
-
+USE bestbuy;
 -- find all products
 SELECT * FROM Products;
 
@@ -10,7 +10,7 @@ SELECT * FROM Products WHERE Price = 1400;
 SELECT * FROM Products WHERE Price IN (11.99, 13.99);
 
 -- find all products that do NOT cost 11.99 - using NOT
-SELECT * FROM Products WHERE Price != 11.99;
+SELECT * FROM Products WHERE NOT Price = 11.99;
 
 -- find all products and sort them by price from greatest to least
 SELECT * FROM Products ORDER BY Price DESC;
@@ -28,7 +28,7 @@ SELECT * FROM employees WHERE FirstName LIKE 'j%';
 Select * FROM products where Name Like '%Macbook%';
 
 -- find all products that are on sale
-SELECT * FROM products WHERE OnSale;
+SELECT * FROM products WHERE OnSale = TRUE;
 
 -- find the average price of all products
 SELECT Avg(price) FROM products;
